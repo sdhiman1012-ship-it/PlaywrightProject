@@ -9,4 +9,8 @@ async Home()
     await expect(this.page.getByRole('heading', {name: 'Dashboard'})).toBeVisible();
 }
 
+async openRecruitment() {
+  await this.page.getByRole("link", { name: "Recruitment" }).click();
+  await expect(this.page).toHaveURL(/recruitment/);
+}
 }

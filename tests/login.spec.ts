@@ -12,5 +12,8 @@ test('logs in to OrangeHRM',async({page})=> {
   await loginpage.open();
   await loginpage.login('Admin', 'admin123');
   await home.Home();
+
+    await home.openRecruitment();
 });
+
 
